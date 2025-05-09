@@ -14,6 +14,18 @@ import torchvision.transforms as transforms
 from torchvision.models.segmentation import deeplabv3_resnet50
 from collections import OrderedDict
 from io import BytesIO
+import os
+import gdown
+
+# Créer un dossier pour stocker les modèles
+os.makedirs("Models", exist_ok=True)
+
+# Télécharger les modèles depuis Google Drive
+gdown.download("https://drive.google.com/uc?id=1pBqEID637icNoLhfp9WV_wUikf4NelAX", "Models/cnn_simple.h5", quiet=False)
+gdown.download("https://drive.google.com/uc?id=1e0Pna1PNoUfG363uk4EW7HP6boUnOJyj", "Models/mobil_model.h5", quiet=False)
+gdown.download("https://drive.google.com/uc?id=1btGAg9S1_h9GhktEEw3OR_xD_s-jgD4a", "Models/attention_model.h5", quiet=False)
+gdown.download("https://drive.google.com/uc?id=1btH2vmjSXWyUA7JB_ZQ8h2803mp7ei4T", "Models/deeplab.pth", quiet=False)
+gdown.download("https://drive.google.com/uc?id=1isTNWtdsAnNDt06Tnq0QtyGLXezxl6KN", "Models/unetpath.pth", quiet=False)
 
 # Configuration de la page: doit être le premier appel Streamlit
 st.set_page_config(page_title="Analyse Échographique Hépatique", layout="wide")
