@@ -5,7 +5,7 @@ torch
 torchvision
 albumentations
 opencv-python
-Pillow
+pillow
 matplotlib
 gdown
 numpy
