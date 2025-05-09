@@ -1,0 +1,9 @@
+streamlit
+tensorflow
+keras
+torch
+torchvision
+albumentations
+opencv-python
+Pillow
+matplotlib
