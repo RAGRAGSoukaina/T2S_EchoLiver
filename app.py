@@ -19,15 +19,12 @@ import gdown
 # Créer un dossier pour stocker les modèles
 os.makedirs("Models", exist_ok=True)
 
-# Télécharger les modèles de classification
-gdown.download(id="1pBqEID637icNoLhfp9WV_wUikf4NelAX", output="Models/mobil_model.h5", quiet=False)      # Mobile model
-gdown.download(id="1e0Pna1PNoUfG363uk4EW7HP6boUnOJyj", output="Models/cnn_simple.h5", quiet=False)      # CNN simple
-gdown.download(id="1btGAg9S1_h9GhktEEw3OR_xD_s-jgD4a", output="Models/attention_model.h5", quiet=False) # Attention model
-
-# Télécharger les modèles de segmentation
-gdown.download(id="1btH2vmjSXWyUA7JB_ZQ8h2803mp7ei4T", output="Models/deeplab.pth", quiet=False)        # DeepLab
-gdown.download(id="1isTNWtdsAnNDt06Tnq0QtyGLXezxl6KN", output="Models/unetpath.pth", quiet=False)       # UNet
-
+# Télécharger les modèles depuis Google Drive (liens convertis)
+gdown.download(id="1e0Pna1PNoUfG363uk4EW7HP6boUnOJyj", output="Models/cnn_simple.h5", quiet=False, use_cookies=False)
+gdown.download(id="1pBqEID637icNoLhfp9WV_wUikf4NelAX", output="Models/mobil_model.h5", quiet=False, use_cookies=False)
+gdown.download(id="1btGAg9S1_h9GhktEEw3OR_xD_s-jgD4a", output="Models/attention_model.h5", quiet=False, use_cookies=False)
+gdown.download(id="1btH2vmjSXWyUA7JB_ZQ8h2803mp7ei4T", output="Models/deeplab.pth", quiet=False, use_cookies=False)
+gdown.download(id="1isTNWtdsAnNDt06Tnq0QtyGLXezxl6KN", output="Models/unetpath.pth", quiet=False, use_cookies=False)
 # Configuration de la page
 st.set_page_config(page_title="Analyse Échographique Hépatique", layout="wide")
 
