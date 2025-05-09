@@ -7,3 +7,4 @@ albumentations
 opencv-python
 Pillow
 matplotlib
+gdown
